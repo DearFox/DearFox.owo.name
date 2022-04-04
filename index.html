@@ -40,38 +40,6 @@
 			color:#DBD8D3;
 			padding-bottom: 32px;
 		}
-		h3 {
-			color:#DBD8D3;
-			padding-bottom: 32px;
-		}
-		a {
-			text-decoration: underline;
-			cursor: pointer;
-			color: white;
-		}
-		.modal {
-			display: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background: #00000050;
-		}
-		.modal-warning {
-                        background:#26292A;
-                        height: 170px;
-                        width: 420px;
-                        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-			padding: 10px;
-                        border-radius: 10px;
-			margin: 32px auto;
-		}
-		.modal-warning-buttons {
-			float: right;
-		}
-		.modal-warning-buttons > button {
-			height: 32px;
-			width: 100px;
-		}
 	</style>
 </head>
 <body>
@@ -79,27 +47,9 @@
 		<div class="card">
 			<div class="comming_soon">
 			<h2>DearFox</h2>
-			<h2><a target="_blank" href="https://t.me/DearFox">Telegram</a><br><a onclick="warningModal('https://www.furaffinity.net/user/dearfox/')">Furaffinity</a><br><a onclick="warningModal('https://twitter.com/MrDearFox')">Twitter</a></h2>
-			</div>
-		</div>
-		<div class="modal">
-			<div class="modal-warning">
-				<h3>Внимание! Контент по этой ссылке может содержать NSFW контент!</h3>
-				<div class="modal-warning-buttons">
-					<button id="modal-go">Перейти</button>
-					<button onclick="closeModal()">Закрыть</button>
-				</div>
+			<h2><a target="_blank" href="https://t.me/DearFox">Telegram</a><br><a target="_blank" href="https://www.furaffinity.net/user/dearfox/">Furaffinity</a><br><a target="_blank" href="https://twitter.com/MrDearFox">Twitter</a></h2>
 			</div>
 		</div>
 	</div>
-	<script>
-		function warningModal(url) {
-			document.querySelector(".modal").style.display = "block";
-			document.getElementById("modal-go").setAttribute("onclick", "window.open('" + url + "', '_blank')");
-		}
-		function closeModal() {
-			document.querySelector(".modal").style.display = "none";
-		}
-	</script>
 </body>
 </html>
